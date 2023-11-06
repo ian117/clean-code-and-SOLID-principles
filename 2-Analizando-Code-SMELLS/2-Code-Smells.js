@@ -7,15 +7,15 @@
  * 
  *  7 Tipos de Code Smells
  * 
- *   ° En comentarios
+ *   ° En comentarios⚠️
  * 
- *   ° Entorno de Desarrollo
+ *   ° Entorno de Desarrollo⚠️
  * 
- *   ° En Funciones
+ *   ° En Funciones⚠️
  * 
- *   ° Code Smells Generales 
+ *   ° Code Smells Generales ⚠️
  *    
- *   ° En nombres
+ *   ° En nombres⚠️
  * 
- *   ° En Test
+ *   ° En Test⚠️
  */

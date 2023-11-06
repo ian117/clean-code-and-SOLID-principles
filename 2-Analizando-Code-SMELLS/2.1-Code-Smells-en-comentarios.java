@@ -1,5 +1,5 @@
 /**
- *  Información Inapropiada
+ *  Información Inapropiada⚠️
  *  
  *  Todo lo que deba estar en otro sistema, debe de ser transladado al otro sistema
  */
@@ -9,7 +9,7 @@
     //  TODO's  (ASANA, TRELLO...)
 
 /**
- *  Comentario Obsoleto
+ *  Comentario Obsoleto⚠️
 */
     // Examples
 
@@ -17,20 +17,20 @@
     private Date lastLoginDate; // lastLoginDate AS String (D-M-Y)(H:M) ❌
 
 /**
- *  Comentario Redundante
+ *  Comentario Redundante⚠️
 */
     //Una pieza de código que se explique por si sola y además, esté comentada con cosas obvias
 
 
 /**
- *  Comentarios Mal Redactados
+ *  Comentarios Mal Redactados⚠️
  * 
  *      > Hay que ser claros y directos
  *      > No comentar cosas obvias
 */
 
 /**
- *  Código Comentado
+ *  Código Comentado⚠️
  * 
  *     > No dejar código comentado, ya que se guarda en el GIT (control de versiones)
 */

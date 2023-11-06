@@ -1,5 +1,5 @@
 /**
- * Compilación requiere más de un paso ✅
+ * Compilación requiere más de un paso ⚠️
  */
     // Debe ser capaz de hacer un checkout del código fuente y compilar o correr con otro
 
@@ -8,7 +8,7 @@
     mvn install ||  npm install && npm run start 
 
 /**
- * Test requiere más de un paso ✅
+ * Test requiere más de un paso ⚠️
  */
 
     // Los test se deben de ejecutar con un comando rápido y obvio
