@@ -90,6 +90,63 @@ Esto **permite una mayor flexibilidad**, ya que puedes **introducir** diferentes
 
 Por ejemplo si necesitas leer desde una base de datos en lugar de un archivo.
 
+#### Factorias
+
+Aplicando Factory con el ejemplo anterior sería:
+
+Supongamos que tenemos la misma situación que antes, con una clase _LecturaArchivo_ y _ProcesadorTexto_ que depende directamente de ella. 
+
+En lugar de cambiar directamente a una interfaz, utilizaremos una **factoría** para **crear la instancia de la clase concreta**.
+
+```java
+// Clase original de bajo nivel
+class LecturaArchivo {
+    public String leerContenido(String nombreArchivo) {
+        // Lógica para leer el contenido de un archivo
+        return "Contenido del archivo";
+    }
+}
+
+// Factoría para la clase de bajo nivel
+class LecturaArchivoFactory {
+    public LecturaArchivo crearLecturaArchivo() {
+        return new LecturaArchivo();
+    }
+}
+
+// Clase de alto nivel que depende de la factoría
+class ProcesadorTexto {
+    private LecturaArchivoFactory factory;
+
+    public ProcesadorTexto(LecturaArchivoFactory factory) {
+        this.factory = factory;
+    }
+
+    public void procesarArchivo(String nombreArchivo) {
+        LecturaArchivo lectorArchivo = factory.crearLecturaArchivo();
+        String contenido = lectorArchivo.leerContenido(nombreArchivo);
+        // Lógica para procesar el contenido
+    }
+}
+```
+
+En este ejemplo, introducimos _LecturaArchivoFactory_ para crear instancias de LecturaArchivo. 
+
+_ProcesadorTexto_ ahora **depende** de esta **factoría** en lugar de depender directamente de __LecturaArchivo__. 
+
+Esto proporciona una mayor flexibilidad, ya que la **factoría** puede ser **fácilmente extendida** para crear **diferentes implementaciones** de _LecturaArchivo_.
+
+
+Ventajas:
+
++ _ProcesadorTexto_ ahora **depende de una abstracción** indirecta (_LecturaArchivoFactory_) en lugar de depender directamente de una clase concreta (_LecturaArchivo_).
+
++ Introducir **nuevas implementaciones** de _LecturaArchivo_ es **más fácil** ya que solo necesitas **actualizar la factoría**.
+
+
+Este enfoque utilizando factorías ayuda a cumplir con el DIP 
+
+Al introducir una **capa de abstracción** adicional y permitir que las **clases** de **alto nivel dependan** de **abstracciones** en lugar de detalles concretos de implementación.
 
 
 [^1]: Clase tiene una alta probabilidad de cambiar debido a variaciones en sus dependencias.
